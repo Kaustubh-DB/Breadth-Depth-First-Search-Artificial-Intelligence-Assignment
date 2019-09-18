@@ -25,7 +25,7 @@ def valid_index(pos, n, m):
 def moves(map, row, col):
 
 	moves=((row+1,col), (row-1,col), (row,col-1), (row,col+1))
-	print(moves)
+	#print(moves)
 	#print(map[0])
 
 	# Return only moves that are within the board and legal (i.e. on the sidewalk ".")
@@ -52,20 +52,20 @@ def search1(IUB_map):
 	#print(IUB_map[0])
 	while fringe:
 		(curr_move, curr_dist,path) = fringe.pop(0)
-		print("--------------")
+		#print("--------------")
 		if IUB_map[curr_move[0]][curr_move[1]] == "@":
 			return str(curr_dist) + '  ' + path
 		#visited.append(curr_move)
 		for move in moves(IUB_map, *curr_move):
-			print("This is current move", curr_move)
-			print("This is move",move)
+			#print("This is current move", curr_move)
+			#print("This is move",move)
 			direction = find_path(*move, *curr_move)
 			if move not in visited:
-				print("This is the move taken to add to fringe",move)
+				#print("This is the move taken to add to fringe",move)
 				visited.append(move)
-				print("VISITED **********",visited)
+				#print("VISITED **********",visited)
 				fringe.append((move, curr_dist+1, path+direction))
-				print("FRINGE **********", fringe)
+				#print("FRINGE **********", fringe)
 
 
 
