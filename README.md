@@ -13,6 +13,7 @@ At the first point, Initial node is inserted into the fringe, and then popped ou
 
 
 Part 2: Hide and Seek
+
 Python program for arranging K friends, such that no two friends can see one another.
 This program demonstrates search algorithm named Depth First Search. The set of components for the program are: 1] The map given in a ‘.Txt’ File. 2] Certain blocked positions that are marked by ‘&’.
 Solution of arranging is that we iterate from left to right and top to bottom over the map to get the first empty position. So now is the time where we can place the 1st Friend at that point. The Initial State will be defined by placing the first friend and moving this state to the fringe. Successor function Succ:S will be all the valid position that the second friend could be placed with a condition that it can’t be placed in the same row, column respective to the friend. New Friend can only be placed after the block between the same row and column. Check if new friend is visible on the east, west, south and north from this side walk, if the friend is not visible in the same path, then place that friend on the board and push it on the fringe. Check this loop till all the friends are placed and no more fringe items are left. That will be our goal state.
