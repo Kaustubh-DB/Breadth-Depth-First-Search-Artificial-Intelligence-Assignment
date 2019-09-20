@@ -76,7 +76,7 @@ def search1(IUB_map):
 
 # Main Function
 if __name__ == "__main__":
-    IUB_map = parse_map("map.txt")
+    IUB_map = parse_map(sys.argv[1])
     path = ''
     print("Shhhh... quiet while I navigate!")
     solution = search1(IUB_map)
