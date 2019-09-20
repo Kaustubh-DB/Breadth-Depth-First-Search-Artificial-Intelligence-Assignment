@@ -26,7 +26,7 @@ def printable_board(board):
     return "\n".join(["".join(row) for row in board])
 
 
-# Check the position of
+# Check the position of board above from the current r
 def check_on_the_board_above(board, r, c):
     for row_board in range(r, -1, -1):
         if board[row_board][c] == '&':
@@ -36,6 +36,8 @@ def check_on_the_board_above(board, r, c):
     return True
     # [1]
 
+
+# Check the position of board below from the current r
 
 def check_on_the_board_below(board, r, c):
     for row_board in range(r, len(board)):
@@ -47,6 +49,8 @@ def check_on_the_board_below(board, r, c):
     # [1]
 
 
+# Check the position of board left from the current c
+
 def check_on_the_board_left(board, r, c):
     for col_board in range(c, -1, -1):
         if board[r][col_board] == '&':
@@ -56,6 +60,8 @@ def check_on_the_board_left(board, r, c):
     return True
     # [1]
 
+
+# Check the position of board Right from the current c
 
 def check_on_the_board_right(board, r, c):
     for col_board in range(c, len(board[0])):
@@ -100,7 +106,7 @@ def count_friends(board):
     return sum([row.count('F') for row in board])
 
 
-# Solve n-rooks!
+# Solve n-rooks! Defined Traversed list to reduce the number of states to explore
 def solve(initial_board):
     traversed = []
     fringe = [initial_board]
