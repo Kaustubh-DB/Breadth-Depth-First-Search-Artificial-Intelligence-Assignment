@@ -1,4 +1,7 @@
-# a0 Part 1: Finding Your Way
+# a0 
+
+Part 1: Finding Your Way
+
 Python program for Finding Your Way from a given location to the final location.
 This program demonstrates search algorithm named Breadth First Search. It basically finds for best possible shortest path for a given set of input map. The set of components for the program are: 1] The map given in a ‘.Txt’ File. 2] Certain blocked positions are marked by ‘&’. 3] The starting position marked by #. 4] A end position or the target position marked by @.
 Solution of Finding Your Way problem we check the possible valid paths that is, all the (‘.‘) positions, in the same row and in the same column, starting with the ‘#’, and moving onto the next valid adjacent nodes, considering & as a block-way and thereby restricting its path. 
