@@ -37,7 +37,7 @@ def moves(map, row, col):
     return [move for move in moves if valid_index(move, len(map), len(map[0])) and (map[move[0]][move[1]] in ".@")]
 
 
-# Perform search on the map
+# Defines the Path of the traversal, N: If its north, S: If its South, E: If its East, W:
 def find_path(row, col, or_row, or_col):
     if row == or_row - 1:
         return 'N'
@@ -49,6 +49,7 @@ def find_path(row, col, or_row, or_col):
         return 'E'
 
 
+# Perform search on the map, visited array is defined to reduce the number of states to explore
 def search1(IUB_map):
     # Find my start position
     you_loc = [(row_i, col_i) for col_i in range(len(IUB_map[0])) for row_i in range(len(IUB_map)) if
@@ -73,6 +74,8 @@ def search1(IUB_map):
                 fringe.append((move, curr_dist + 1, path + direction))
     return 'Inf'
 
+
+# Returns Inf if solution is not found and is going into an infinte loop.
 
 # Main Function
 if __name__ == "__main__":
