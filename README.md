@@ -8,6 +8,9 @@ Solution of Finding Your Way problem we check the possible valid paths that is, 
 State of states will be all the possible moves from # point to @. Initial state will be the starting location of traversal(#). Successor function Succ:S will be all the valid positions(“.”) in the same row and column for that particular state.  
 Observations and Experiment,
 At the first point, Initial node is inserted into the fringe, and then popped out(Queue approach) and its valid successor is being appended to the fringe. And this task is being carried out until we reach our goal state. At Initial stage, main difficulty that I found going through this code was it was going in infinite loop as it was searching for all possible moves, and also considered the recurring moves. Hence, to reduce the number of states I used visited_node list, thereby adding visited states into fringe. Also to get all the possible directions(N,S,W,E), I passed *move(present) and *curr_move(successor) to see the comparison between row or column values, for instance if curr_move’s row valueis 1 less than move’s value then it is travelling North so used literal ‘N’ and thereby appended it in the fringe along with the cost of moving to its successor node that is 1. This loop was carried until we reached our goal state thereby increasing its distance by one while moving to its successor and adding path of its traversal. Also if solution is not found, and is going into infinite loop then it will return Inf. 
+
+
+
 Part 2: Hide and Seek
 Python program for arranging K friends, such that no two friends can see one another.
 This program demonstrates search algorithm named Depth First Search. The set of components for the program are: 1] The map given in a ‘.Txt’ File. 2] Certain blocked positions that are marked by ‘&’.
