@@ -71,7 +71,7 @@ def search1(IUB_map):
                 visited_node.append(move)
                 # print("VISITED **********",visited)
                 fringe.append((move, curr_dist + 1, path + direction))
-            # print("FRINGE **********", fringe)
+    return 'Inf'
 
 
 # Main Function
@@ -80,7 +80,5 @@ if __name__ == "__main__":
     path = ''
     print("Shhhh... quiet while I navigate!")
     solution = search1(IUB_map)
-
     print("Here's the solution I found:")
     print(solution)
-
